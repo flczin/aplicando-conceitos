@@ -1,0 +1,14 @@
+<h2>Formulário Simples com Angular</h2>
+
+<form>
+  <label for="inputCor">Cor:</label>
+  <input type="text" id="inputCor" name="inputCor" [(ngModel)]="cor">
+
+  <label for="inputTamanho">Tamanho:</label>
+  <input type="text" id="inputTamanho" name="inputTamanho" [(ngModel)]="tamanho">
+
+  <label for="inputHidden">Hidden:</label>
+  <input type="checkbox" id="inputHidden" name="inputHidden" [(ngModel)]="visivel">
+</form>
+
+<p [hidden]="visivel" [ngStyle]="{'background-color': cor, 'font-size': tamanho + 'px'}">Aplicando os estilos aqui</p>
